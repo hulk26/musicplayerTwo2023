@@ -1,0 +1,14 @@
+{
+    "music":
+    [
+        {
+            "id":1,
+            "artist":"bow wow",
+            "titleYearGenre":"bounce 2023 rap",
+            "description":"Exercitationem eaque, illo dolorem et facere explicabo rem aspernatur, tempore fugit ab, perferendis consequatur possimus soluta omnis eligendi consectetur. Facere, reiciendis ut?",
+            "songCover":"public\images\R.fa50de0ff3d7090e5c33d125c843617c.png",
+            "songAudio":"",
+            "price":70
+        }
+    ]
+}

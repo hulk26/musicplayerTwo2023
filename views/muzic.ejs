@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+ <link rel="stylesheet" href="./all.min.css">
+</head>
+<body>
+    
+<style>
+
+
+    body{
+        padding:0;
+        margin:0;
+        box-sizing:border-box;
+    }
+</style>
+
+
+
+
+<section style="width:90%;height:900px;margin:auto;background:rgba(245, 222, 179, 0.075);">
+
+
+<section style=" width:90%; height:900px;margin:auto;box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.432);">
+
+
+
+
+
+
+
+
+
+
+    <section  style="background:black;width:100%;position:sticky;top:0; display: flex;">
+        <section>
+            <li><a href="" style="color:white;text-decoration:none;list-style:none;line-height:50px;font-family:fantasy; font-size:larger;">musiclab</a></li>
+        </section>
+        
+        
+        <section style="width:60%;text-align:center;display:flex;margin: auto;">
+        
+            <li><a href="" style="color:white;text-decoration:none;list-style:none;font-family:fantasy; font-size:larger;">Genre</a></li>
+        
+            <li><a href="" style="color:white;text-decoration:none;list-style:none;font-family:fantasy; font-size:larger;">Contact</a></li>
+            
+        
+            <div id="searchbox" style="margin:auto;width:350px;height:10%;background:#E60023;border-radius:2px;">
+                <input placeholder="search" type="text" style="height:28px;width:300px;border:none;">
+                <i class="fa-solid fa-magnifying-glass" style="font-size:large;color:white;cursor: pointer;padding:3px;"></i>
+            </div>
+        
+        </section>
+        
+        </section>
+
+
+
+
+
+
+
+
+        <% items.music.forEach(function(item){ %>
+
+
+<section class="song-1" style=" border-radius:6px;" data-item-id="<%= item.id %>">
+
+
+
+
+    <section style="display: flex;"> <img src="./images/<%= item.songCover %>" width="200px" height="200px" style="margin-top:22px;margin-left:6px;"> 
+
+
+        <section style="margin-left:15px;">
+        <h2 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"><%= item.artist %></h2>
+        <p style="width:7%;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" >
+            <%= item.titleYearGenre %>
+        </p>
+        
+                <p style="width:80%;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> <%= item.description %>
+                </p>
+        </section>
+        
+        </section>
+
+<section style="padding:14px; display: flex;">
+    <section>
+        
+      
+        
+        
+        <i  id="playPauseBtn" class="fa-solid fa-play" style="font-size:xx-large;cursor: pointer;margin-left:7px;" title="Play/Pause preview" onclick="toggle()"></i>
+<audio id="song">
+    <source src="./audio/<%= item.songAudio %>" type="audio/mp3">
+</audio>
+
+
+      </section>
+
+
+      <section title="Share"  style="box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.432); width:139px;height:40px;margin-left:16px;border-radius:3px;">
+        <i class="fa-brands fa-facebook" style="padding:1px;font-size:xx-large;cursor: pointer;background:#4267B2"></i>
+        <i class="fa-brands fa-square-twitter" style="padding:1px;font-size:xx-large;cursor: pointer;background: #1D9BF0;"></i>
+        <i class="fa-brands fa-pinterest" style="padding:1px;font-size:xx-large;cursor: pointer;background:	#E60023;"></i>
+        <i class="fa-brands fa-whatsapp" style="padding:1px;font-size:xx-large;cursor: pointer;background:	#5FFC7B;"></i>
+      </section>
+</section>
+
+
+
+        <section style="display:flex;padding:5px;">
+     
+        
+            <div title="Purchase full song" id="purchaseBtn">Buy full song</div> 
+        <style>
+ #purchaseBtn{
+    margin-left:4px;
+    color:white;
+    background-color:black;
+    width:99px;
+    height:25px;
+    margin-top:9px;
+    border-radius:4px;
+    text-align:center;
+    padding-top:5px;
+    cursor: pointer;
+    font-family:fantasy;
+ }
+
+
+
+            #purchaseBtn:hover{
+                background-color:#E60023;;
+            }
+        </style>
+           
+           
+           
+            <p id="price" style="margin-left:4px;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">: R <%= item.price / 100 %></p>
+        
+        </section>
+
+
+        <hr style="border-style:groove;color:rgb(0, 0, 0);">
+
+
+</section>
+
+<% }) %>
+
+
+
+
+
+<section style="background:black;color:white;text-align:center;padding:8px;">
+    <p>copyright &copy; 2023 <span>musiclab</span></p>
+</section>
+
+</section>
+
+
+
+
+
+</section>
+
+<script src="./my.js"></script>
+
+</body>
+</html>
